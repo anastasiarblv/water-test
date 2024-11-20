@@ -16,8 +16,8 @@ def fill_missing_with_mean(df):
     try:
         for column in df.columns:
             if df[column].isnull().any():
-                median_value = df[column].mean()
-                df[column].fillna(median_value,inplace=True)
+                mean_value = df[column].mean() # тут мы ранее сделали опечтку и на самом деле тут mean_value
+                df[column].fillna(mean_value,inplace=True) # тут мы ранее сделали опечтку и на самом деле тут mean_value
         return df
     except Exception as e:
         raise Exception(f"Error Filling missing values : {e}")
