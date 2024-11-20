@@ -60,7 +60,7 @@ def save_model(clf_model, model_name):
 def main():
     data_filepath = "./data/processed/train_processed.csv"
     params_filepath = "params.yaml"
-    model_name = "model.pkl"
+    model_name = "models/model.pkl" # тут вместо "model.pkl" пишем уже "models/"model.pkl"
     try:
         train_data = load_data(data_filepath)
         n_estimators = load_params(params_filepath) # 100
